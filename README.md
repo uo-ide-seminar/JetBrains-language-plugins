@@ -9,6 +9,8 @@ Documentation and examples of our experience learning to build language-specific
   
 * Projects
 
+* Languages 
+
 * FAQ
 
 * License & Credits (full version)
@@ -35,3 +37,7 @@ Goals for the quarter are listed below:
 | Quack      | description              |   complete   |
 | Quilt | description              |    *incomplete*   |
 | Docstring Generator | description              |    *incomplete*   |
+
+
+## Languages
+Please see this [readme] (https://github.com/uo-ide-seminar/JetBrains-language-plugins/blob/master/Languages.md) for more information on the language plugins specifically.
