@@ -1,0 +1,50 @@
+buildscript {
+    repositories {
+        mavenCentral()
+    }
+}
+
+plugins {
+    id "org.jetbrains.intellij" version "0.4.2"
+}
+
+apply plugin: 'idea'
+idea {
+    module {
+        generatedSourceDirs += file('gen')
+    }
+}
+
+apply plugin: 'org.jetbrains.intellij'
+
+apply plugin: 'java'
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
+
+sourceSets {
+    main {
+        java {
+            srcDirs = ["gen"]
+            srcDir 'src/com/simpleplugin/'
+            srcDir 'src/com/simpleplugin/psi'
+            srcDir 'src/com/simpleplugin/psi/impl'
+        }
+		resources{
+			srcDir 'resources/'
+		}
+    }
+}
+
+patchPluginXml {
+	sinceBuild '162'
+}
+
+intellij {
+    version "IC-2018.3.4"
+    plugins 'coverage'
+    pluginName 'simple_language_plugin'
+
+}
+
+group 'org.jetbrains'
+version '1.2'
