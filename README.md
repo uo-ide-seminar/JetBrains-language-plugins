@@ -10,7 +10,7 @@ for more.
 ## Top Level Structure 
 
 * Intro
-  ** Sources and credits (brief version)
+  * Sources and credits (brief version)
 
 * [Languages](https://github.com/uo-ide-seminar/JetBrains-language-plugins/blob/master/Languages.md)
 
