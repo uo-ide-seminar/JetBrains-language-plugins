@@ -9,6 +9,8 @@ Documentation and examples of our experience learning to build language-specific
   
 * Projects
 
+* Languages 
+
 * FAQ
 
 * License & Credits (full version)
@@ -25,6 +27,8 @@ Goals for the quarter are listed below:
 5. Determine what areas in the above processes are lacking documentation
 6. Share our results including the problems that we ran into in order to help others in the future
 
+### Sources and Credits
+* [Grammar-Kit](https://github.com/JetBrains/Grammar-Kit), [PSI-Viewer](https://plugins.jetbrains.com/plugin/227-psiviewer)
 
 ## Projects
 
@@ -34,4 +38,8 @@ Goals for the quarter are listed below:
 | [dl-plugin](https://github.com/zachsully/dl-plugin) | A plugin for the [DL](https://github.com/zachsully/dl): a Dual Language for computing with algebraic data types and coalgebraic codata types. | plugin supports parsing of DL programs |
 | Quack      | description              |   complete   |
 | Quilt | description              |    *incomplete*   |
-| Docstring Generator | description              |    *incomplete*   |
+| Docstring Generator | Generate a python Docstring              |    *incomplete*   |
+| Eidos | description              |    *incomplete*   |
+
+## Languages
+Please see this [readme](https://github.com/uo-ide-seminar/JetBrains-language-plugins/blob/master/Languages.md) for more information on the language plugins specifically.
