@@ -38,7 +38,7 @@ Goals for the quarter are listed below:
 | [dl-plugin](https://github.com/zachsully/dl-plugin) | A plugin for the [DL](https://github.com/zachsully/dl): a Dual Language for computing with algebraic data types and coalgebraic codata types. | plugin supports parsing of DL programs |
 | Quack      | description              |   complete   |
 | Quilt | description              |    *incomplete*   |
-| Docstring Generator | Generate a python Docstring              |    *incomplete*   |
+| Docstring Generator | Generate a python Docstring              |    *very iffey*   |
 | Eidos | description              |    *incomplete*   |
 
 ## Languages
