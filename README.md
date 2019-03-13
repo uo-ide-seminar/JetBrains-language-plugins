@@ -37,7 +37,7 @@ Goals for the quarter are listed below:
 | Quack      | description              |   complete   |
 | Quilt | description              |    *incomplete*   |
 | Docstring Generator | Generate a python Docstring              |    *incomplete*   |
-
+| Eidos | Generate a python Docstring              |    *incomplete*   |
 
 ## Languages
 Please see this [readme] (https://github.com/uo-ide-seminar/JetBrains-language-plugins/blob/master/Languages.md) for more information on the language plugins specifically.
