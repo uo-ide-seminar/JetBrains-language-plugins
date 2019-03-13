@@ -43,3 +43,6 @@ Goals for the quarter are listed below:
 
 ## Languages
 Please see this [readme](https://github.com/uo-ide-seminar/JetBrains-language-plugins/blob/master/Languages.md) for more information on the language plugins specifically.
+
+## FAQ
+We ran into many problems and found that a lot of tutorials lacked adequate documentation. We tried to summarize some of those common issues in the following [FAQ](https://github.com/uo-ide-seminar/JetBrains-language-plugins/blob/master/FAQ.md)
