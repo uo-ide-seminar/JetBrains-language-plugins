@@ -62,8 +62,8 @@ private Term_atom_group ::= num_Term
 
 add_Term     ::= Term '+' Term
 app_Term     ::= Term Var
-num_Term     ::= NUMBER
-var_Term     ::= ID
+num_Term     ::= Num
+var_Term     ::= Var
 paren_Term   ::= '(' Term ')'
 ```
 
