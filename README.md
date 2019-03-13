@@ -24,7 +24,7 @@ for more.
 
 * Properties files (I think that's the 'simple language plugins' above)
 * Quilt
-* DC
+* DL, a small functional language 
 * Quack
 * Docstring generator
 * [dl-plugin](https://github.com/zachsully/dl-plugin)
