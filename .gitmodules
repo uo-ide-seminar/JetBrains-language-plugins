@@ -7,3 +7,6 @@
 [submodule "plugins/DocstringGen"]
 	path = plugins/DocstringGen
 	url = https://github.com/Nickbonat22/DocstringGen
+[submodule "plugins/simple-jetbrains-psi-plugin"]
+	path = plugins/simple-jetbrains-psi-plugin
+	url = https://github.com/aevelhoch/simple-jetbrains-psi-plugin
