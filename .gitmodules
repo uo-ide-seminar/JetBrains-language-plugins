@@ -1,0 +1,6 @@
+[submodule "plugins/simple_language_plugin"]
+	path = plugins/simple_language_plugin
+	url = https://github.com/Nosler/simple_language_plugin
+[submodule "plugins/dl-plugin"]
+	path = plugins/dl-plugin
+	url = https://github.com/zachsully/dl-plugin
