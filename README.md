@@ -9,3 +9,24 @@ The plugin includes syntax hightlighting, custom file extension support, as well
 types. See https://github.com/uo-ide-seminar/JetBrains-language-plugins/blob/master/simple_language_plugin/README.md
 for more.
 
+## Top Level Structure 
+
+* Intro
+  ** Sources and credits (brief version)
+
+* Languages
+
+* FAQ
+
+* Projects
+
+* License & Credits (full version)
+
+## Planned little languages in this repo (from whiteboard)
+
+* Properties files (I think that's the 'simple language plugins' above)
+* Quilt
+* DC
+* Quack
+* Docstring generator
+
