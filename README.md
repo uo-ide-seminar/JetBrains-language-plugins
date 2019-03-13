@@ -27,6 +27,9 @@ Goals for the quarter are listed below:
 5. Determine what areas in the above processes are lacking documentation
 6. Share our results including the problems that we ran into in order to help others in the future
 
+### Sources and Credits
+* [Grammar-Kit](https://github.com/JetBrains/Grammar-Kit)
+* [PSI-Viewer](https://plugins.jetbrains.com/plugin/227-psiviewer)
 
 ## Projects
 
@@ -40,4 +43,4 @@ Goals for the quarter are listed below:
 | Eidos | description              |    *incomplete*   |
 
 ## Languages
-Please see this [readme] (https://github.com/uo-ide-seminar/JetBrains-language-plugins/blob/master/Languages.md) for more information on the language plugins specifically.
+Please see this [readme](https://github.com/uo-ide-seminar/JetBrains-language-plugins/blob/master/Languages.md) for more information on the language plugins specifically.
