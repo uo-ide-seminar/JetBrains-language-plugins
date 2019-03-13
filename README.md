@@ -28,8 +28,7 @@ Goals for the quarter are listed below:
 6. Share our results including the problems that we ran into in order to help others in the future
 
 ### Sources and Credits
-* [Grammar-Kit](https://github.com/JetBrains/Grammar-Kit)
-* [PSI-Viewer](https://plugins.jetbrains.com/plugin/227-psiviewer)
+* [Grammar-Kit](https://github.com/JetBrains/Grammar-Kit), [PSI-Viewer](https://plugins.jetbrains.com/plugin/227-psiviewer)
 
 ## Projects
 
