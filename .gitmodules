@@ -4,3 +4,6 @@
 [submodule "plugins/dl-plugin"]
 	path = plugins/dl-plugin
 	url = https://github.com/zachsully/dl-plugin
+[submodule "plugins/DocstringGen"]
+	path = plugins/DocstringGen
+	url = https://github.com/Nickbonat22/DocstringGen
