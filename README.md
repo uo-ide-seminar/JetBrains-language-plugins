@@ -5,12 +5,10 @@ Documentation and examples of our experience learning to build language-specific
 
 * Intro
   * Sources and credits (brief version)
-
-* [Languages](https://github.com/uo-ide-seminar/JetBrains-language-plugins/blob/master/Languages.md) : Notes on writing a custom language front end using GrammarKit to produce a PSI structure, which is (roughly) a parse tree structure that plugins can traverse, analyze, and modify. 
+  
+* Projects
 
 * FAQ
-
-* Projects
 
 * License & Credits (full version)
 
