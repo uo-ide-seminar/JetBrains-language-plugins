@@ -30,7 +30,7 @@ Unlike other parser generators like yacc and Happy, Grammar-Kits' PEG grammars
 do not support left recursion. For instance, we may want to write the following
 grammar for terms in our language.
 
-'''
+```
 Term ::= Term '+' Term           -- addition
        | Term1
 
@@ -40,14 +40,14 @@ Term1 ::= Term TermAtomic        -- function application
 TermAtomic ::= Num
              | Var
              | '(' Term ')'
-'''
+```
 
 Because the grammar contains left recursion, we have to massage the grammar to
 get it in a non-left-recursive form. Using the
 [HOW-TO guide](https://github.com/JetBrains/Grammar-Kit/blob/master/HOWTO.md),
 we can keep the left-recursion with a trick.
 
-'''
+```
 {
   extends(".*Term")=Term
 }
@@ -65,7 +65,7 @@ app_Term     ::= Term Var
 num_Term     ::= NUMBER
 var_Term     ::= ID
 paren_Term   ::= '(' Term ')'
-'''
+```
 
 We break the each production into its own rule and list the order in which they
 are tried in the top level production. *Essential* in this technique is the line
