@@ -35,7 +35,7 @@ Goals for the quarter are listed below:
 | Name          | Description           | Status  |
 | ------------- |-----------------------| -------:|
 | Simple Language Plugin| The simple language plugin subdirectory contains an implementation of a minimal plugin using the Gradle build system. The plugin includes syntax hightlighting, custom file extension support, as well as custom icons associated with file types. See https://github.com/Nosler/simple_language_plugin/blob/1d05335e23be63e18ec7e44cd4a140112d98c675/README.md for more.  |   complete   |
-| [dl-plugin](https://github.com/zachsully/dl-plugin) | A plugin for the [DL](https://github.com/zachsully/dl): a Dual Language for computing with algebraic data types and coalgebraic codata types. | plugin supports parsing of DL programs |
+| [dl-plugin](https://github.com/zachsully/dl-plugin) | A plugin for the [DL](https://github.com/zachsully/dl): a Dual Language for computing with algebraic data types and coalgebraic codata types. | plugin supports parsing and syntax highlighting |
 | Quack      | description              |   complete   |
 | Quilt | description              |    *incomplete*   |
 | Docstring Generator | Generate a python Docstring              |    *incomplete*   |
