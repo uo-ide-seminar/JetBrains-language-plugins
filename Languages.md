@@ -80,3 +80,35 @@ example above, we had to limit applications to a non-recursive element in order
 for the Grammar-Kit to accept our grammar. This means that plugins for the
 popular functional languages Ocaml and Haskell will need to write this part of
 the parser themselves.
+
+## Running Projects with Command Line Tools
+
+It's likely that our custom language already has a compiler or interpreter that
+we can call from the command line. Configuring our plugin so that Intellij can
+run our code involves setting up a a command configuration and a program
+runner. The command configuration is used to specify the details of calling the
+compiler, e.g. setting compiler flags. The programmer runner will take a command
+configuration and run it in some manner.
+
+Intellij provides some documentation for setting up command configurations and
+runners
+[Run Configuration Docs](http://www.jetbrains.org/intellij/sdk/docs/basics/run_configurations.html). Unfortunately,
+they do not capture the minimum amount of code that we need to add to our plugin
+to get our custom language running. For extra examples, we found that looking at
+other plugins for Intellij was helpful. There is a convention of storing these
+program runners and configurations in a `runconfig` subdirectory of the plugin.
+
+Most plugins that support running projects with commandline tools have the
+following two additions to their `plugin.xml` file:
+
+```
+<extensions defaultExtensionNs="com.intellij">
+    ...
+    <configurationType implementation="ConfigurationTypeImplementation"/>
+    <programRunner implementation="ProgramRunnerImplementation"/>
+</extensions>
+```
+
+### Run Configurations
+
+### Program Runners
