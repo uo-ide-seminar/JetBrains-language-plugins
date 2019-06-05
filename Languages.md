@@ -109,6 +109,101 @@ following two additions to their `plugin.xml` file:
 </extensions>
 ```
 
-### Run Configurations
+### A little example
 
-### Program Runners
+We will see how the `dl-plugin` implements the bare-minimum required to run code
+with an external compiler. This will require that we create classes to extend
+`RunProfileState`, `SettingsEditor`, `RunConfigurationBase`,
+`ConfigurationType`, `ConfigurationFactory`, and `DefaultProgramRunner`.
+
+First, we start with the `RunProfileState` which actually runs our code. We
+extended `CommandLineState`, which allows us to call our external compiler like
+we do from the command line.
+
+```
+class DLRunProfileState(env : ExecutionEnvironment) : CommandLineState(env) {
+    override fun startProcess(): ProcessHandler {
+        var cmdline = GeneralCommandLine()
+        var project = this.environment.project
+        cmdline.exePath = "dl"
+        cmdline.addParameter("eval")
+        cmdline.addParameter("-D")
+        cmdline.addParameter(project.basePath + "/main.dl")
+        return OSProcessHandler(cmdline.createProcess(),cmdline.getCommandLineString())
+    }
+}
+```
+
+Intellij's build commands are structured with full project compilation in mind,
+e.g. compiling a Java project with many class files. Being a small research
+language, DL is focused on single file compilation. Because of this difference,
+we have a small hack to run DL files: a project will run on the hard-coded
+program path: `main.dl`.
+
+If we were to allow the user change what file is compiled or with what commands,
+then we would use a `SettingsEditor`. This allows us to configure the run
+configuration from inside a project.  For simplicity, this settings editor does
+nothing. The details of our run configuration are hard-coded.
+
+```
+class DLSettingsEditor : SettingsEditor<DLRunConfiguration>() {
+    private var panel : JPanel = JPanel()
+    override fun applyEditorTo(s: DLRunConfiguration) {}
+    override fun createEditor(): JComponent = panel
+    override fun resetEditorFrom(s: DLRunConfiguration) {}
+}
+```
+
+A `RunConfiguration` combines the settings editor and run profile state.
+
+```
+class DLRunConfiguration(project : Project,
+                         factory : ConfigurationFactory,
+                         name : String?)
+    : RunConfigurationBase<DLRunProfileState>(project,factory,name) {
+  override fun getConfigurationEditor(): SettingsEditor<out RunConfiguration>
+     = DLSettingsEditor()
+
+  override fun checkConfiguration() {}
+
+  override fun getState(executor: Executor, environment: ExecutionEnvironment): RunProfileState?
+    = DLRunProfileState(environment)
+}
+```
+
+Our configuration type specifies metadata for our configuration and a factory
+for our run configurations.
+
+```
+class DLCommandConfigurationType : ConfigurationType {
+    override fun getDisplayName(): String = "DL"
+    override fun getIcon(): Icon = DLIcons.FILE_ICON
+    override fun getConfigurationTypeDescription(): String = "DL Command Configuration"
+    override fun getId(): String = "DL_COMMAND_CONFIGURATION"
+    override fun getConfigurationFactories(): Array<ConfigurationFactory>
+      = arrayOf(DLCommandConfigurationFactory())
+}
+```
+
+The configuration factory generates new instances of our configuration type. We
+see that this is where we say which run configuration we want to use,
+i.e. `DLRunConfiguration`.
+
+```
+class DLCommandConfigurationFactory : ConfigurationFactory(DLCommandConfigurationType()) {
+    override fun createTemplateConfiguration(project: Project): RunConfiguration
+      = DLRunConfiguration(project,this,"DL")
+    override fun getName(): String = "DL Configuration Factory"
+}
+```
+
+Finally, a minimum program runner is given below.
+
+```
+class DLRunner : DefaultProgramRunner() {
+    override fun getRunnerId(): String = "DLRunner"
+    override fun canRun(executorId: String, profile: RunProfile): Boolean
+      = DefaultRunExecutor.EXECUTOR_ID.equals(executorId) &&
+            (profile is DLRunConfiguration)
+}
+```
